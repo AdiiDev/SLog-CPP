@@ -6,11 +6,14 @@
 #include <iostream>
 #include <cstdlib>
 #include <exception>
+
 int main()
 {
-	SLog Loger = SLog("nwm.txt");
-	SLog::Display("Czesc!", Thread);
-	SLog::Display(std::exception("Jakies tam ex"), "HAHA");
+	//Tworzenie obiektu
+	SLog Loger = SLog("Test.txt","C:\\Users\\Adii\\Desktop\\");  //Stworzenie pliku o nazwie Test.txt w sciezce C:\Users\Adii\Desktop\
+
+	SLog::Display("Czesc!", Log); //Wyswietli tekst na konsoli i w pliku
+	SLog::Display(std::exception("Blad krytyczny!"), "Blad w funkcji main!"); //Wysiwetli szczegoly wyjatku oraz wiadomosc Blad w funkcji main
 
 	system("pause");
     return 0;
